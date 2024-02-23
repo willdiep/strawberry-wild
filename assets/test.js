@@ -1,12 +1,30 @@
 import { LitElement, html } from 'lit';
 
-// Define the custom element name
-@customElement('my-greeting')
-export class MyGreeting extends LitElement {
-  // Render the template with "Hello world!" message
+class MyHelloWorld extends LitElement {
+  static get properties() {
+    return {
+      message: { type: String },
+    };
+  }
+
+  static get styles() {
+    return html`
+      h1 {
+        font-family: sans-serif;
+      }
+    `;
+  }
+
+  constructor() {
+    super();
+    this.message = 'Hello World!';
+  }
+
   render() {
     return html`
-      <h1>Hello world!</h1>
+      <h1>${this.message}</h1>
     `;
   }
 }
+
+customElements.define('my-hello-world', MyHelloWorld);
