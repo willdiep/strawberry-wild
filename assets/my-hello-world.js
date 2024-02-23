@@ -1,5 +1,3 @@
-import { LitElement, html } from 'lit';
-
 class MyHelloWorld extends LitElement {
   static get properties() {
     return {
@@ -28,3 +26,5 @@ class MyHelloWorld extends LitElement {
 }
 
 customElements.define('my-hello-world', MyHelloWorld);
+
+console.log('from my-hello-world.js')
