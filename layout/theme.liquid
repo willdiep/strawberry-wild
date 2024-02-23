@@ -344,6 +344,8 @@
         recipientFormCollapsed: `{{ 'recipient.form.collapsed' | t }}`,
         countrySelectorSearchCount: `{{ 'localization.country_results_count' | t: count: '[count]' }}`,
       };
+
+      console.log('From theme.liquid')
     </script>
 
     {%- if settings.predictive_search_enabled -%}
