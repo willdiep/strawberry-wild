@@ -9,7 +9,7 @@ class CounterComponent extends HTMLElement {
     this.render();
   }
 
-  // This  method invokes whenever the count property is accessed. `count` acts as a getter for the _count property.
+  // This  method invokes whenever the count property is accessed. `count` acts as a getter for the `_count` property.
   get count() {
     return this._count;
   }
