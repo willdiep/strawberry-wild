@@ -9,12 +9,12 @@ class CounterComponent extends HTMLElement {
     this.render();
   }
 
-  // This  method invokes whenever the count property is accessed. `count` acts as a getter for the `_count` property.
+  // This  method invokes whenever the count property is accessed. `count` acts as a getter for the `_count` property
   get count() {
     return this._count;
   }
 
-  // This method invokes whenever the count property is updated. This can happen when you directly set the count property like this.count = newValue, or indirectly when you call methods like _increment() or _decrement() which in turn modify the count property.
+  // This method invokes whenever the count property is updated. This can happen when you directly set the count property like this.count = newValue, or indirectly when you call methods like _increment() or _decrement() which in turn modify the count property
   set count(value) {
     if (value < 0) return;
     this._count = value;
@@ -22,11 +22,11 @@ class CounterComponent extends HTMLElement {
   }
 
   _increment() {
-    this.count++; // This will trigger the setter, updating the count and re-rendering the component.
+    this.count++; // This will trigger the setter, updating the count and re-rendering the component
   }
 
   _decrement() {
-    this.count--; // This will trigger the setter, updating the count and re-rendering the component.
+    this.count--; // This will trigger the setter, updating the count and re-rendering the component
   }
 
   render() {
