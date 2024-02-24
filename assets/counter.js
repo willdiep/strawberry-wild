@@ -16,6 +16,7 @@ class CounterComponent extends HTMLElement {
 
   // This method invokes whenever the count property is updated. This can happen when you directly set the count property like this.count = newValue, or indirectly when you call methods like _increment() or _decrement() which in turn modify the count property.
   set count(value) {
+    if (value < 0) return;
     this._count = value;
     this.render(); // Re-render the component when count changes
   }
