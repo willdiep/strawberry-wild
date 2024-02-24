@@ -17,11 +17,10 @@ class CounterComponent extends HTMLElement {
 
   set count(value) {
     this._count = value;
-    this.render();
   }
 
   _increment() {
-    this._count++;
+    this._count++; // This will trigger the setter, updating the count and re-rendering the component.
   }
 
   render() {
@@ -39,7 +38,6 @@ class CounterComponent extends HTMLElement {
       </div>
     `;
   }
-  
 }
 
 customElements.define('counter-component', CounterComponent);
