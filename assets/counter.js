@@ -7,9 +7,7 @@ class CounterComponent extends HTMLElement {
   connectedCallback() {
     this.attachShadow({ mode: 'open' });
     this.render();
-    this.shadowRoot.querySelector('button').addEventListener('click', this._increment.bind(this));
   }
-  
 
   get count() {
     return this._count;
@@ -17,10 +15,11 @@ class CounterComponent extends HTMLElement {
 
   set count(value) {
     this._count = value;
+    this.render(); // Re-render the component when count changes
   }
 
   _increment() {
-    this._count++; // This will trigger the setter, updating the count and re-rendering the component.
+    this.count++; // This will trigger the setter, updating the count and re-rendering the component.
   }
 
   render() {
@@ -37,6 +36,9 @@ class CounterComponent extends HTMLElement {
         <button>+1</button>
       </div>
     `;
+
+    // Now that the button is part of the DOM, we can safely attach the event listener
+    this.shadowRoot.querySelector('button').addEventListener('click', this._increment.bind(this));
   }
 }
 
