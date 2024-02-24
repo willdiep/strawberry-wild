@@ -14,6 +14,7 @@ class CounterComponent extends HTMLElement {
   }
 
   set count(value) {
+    console.log(`value: ${value}`)
     this._count = value;
     this.render(); // Re-render the component when count changes
   }
