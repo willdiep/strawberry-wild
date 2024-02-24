@@ -40,8 +40,8 @@ class CounterComponent extends HTMLElement {
       </style>
       <div>
         <p>Count: ${this._count}</p>
-        <button id="increment">+1</button>
-        <button id="decrement">-1</button>
+        <button id="increment">+</button>
+        <button id="decrement">-</button>
       </div>
     `;
 
