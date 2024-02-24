@@ -21,7 +21,7 @@ class CounterComponent extends HTMLElement {
   }
 
   _increment() {
-    this.count++;
+    this._count++;
   }
 
   render() {
@@ -34,7 +34,7 @@ class CounterComponent extends HTMLElement {
         }
       </style>
       <div>
-        <p>Count: ${this.count}</p>
+        <p>Count: ${this._count}</p>
         <button>+1</button>
       </div>
     `;
