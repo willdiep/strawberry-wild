@@ -46,8 +46,14 @@ class CounterComponent extends HTMLElement {
     `;
 
     // Now that the button is part of the DOM, we can safely attach the event listener
-    this.shadowRoot.querySelector('#increment').addEventListener('click', this._increment.bind(this));
-    this.shadowRoot.querySelector('#decrement').addEventListener('click', this._decrement.bind(this));
+    // When you pass a method like _increment as a callback function to an event listener, the context (this keyword) inside that method changes. By default, within the event listener, this refers to the DOM element that triggered the event, not the instance of the class where the method belongs.
+    // this.shadowRoot.querySelector('#increment').addEventListener('click', this._increment.bind(this));
+    // this.shadowRoot.querySelector('#decrement').addEventListener('click', this._decrement.bind(this));
+
+
+    this.shadowRoot.querySelector('#increment').addEventListener('click', () => this._increment());
+    this.shadowRoot.querySelector('#decrement').addEventListener('click', () => this._decrement());
+
   }
 }
 
