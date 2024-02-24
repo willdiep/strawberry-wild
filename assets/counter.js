@@ -54,7 +54,6 @@ class CounterComponent extends HTMLElement {
     // With arrow functions, you don't need to explicitly bind the context because they capture the this value from the surrounding code
     this.shadowRoot.querySelector('#increment').addEventListener('click', () => this._increment());
     this.shadowRoot.querySelector('#decrement').addEventListener('click', () => this._decrement());
-
   }
 }
 
