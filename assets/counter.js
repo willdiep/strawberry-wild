@@ -16,7 +16,6 @@ class CounterComponent extends HTMLElement {
 
   // This method invokes whenever the count property is updated. This can happen when you directly set the count property like this.count = newValue, or indirectly when you call methods like _increment() or _decrement() which in turn modify the count property.
   set count(value) {
-    console.log(`value: ${value}`)
     this._count = value;
     this.render(); // Re-render the component when count changes
   }
@@ -48,8 +47,6 @@ class CounterComponent extends HTMLElement {
     // Now that the button is part of the DOM, we can safely attach the event listener
     this.shadowRoot.querySelector('#increment').addEventListener('click', this._increment.bind(this));
     this.shadowRoot.querySelector('#decrement').addEventListener('click', this._decrement.bind(this));
-
-    console.log(`this.count: ${this.count}`)
   }
 }
 
