@@ -139,8 +139,11 @@
 </div>
 
 <script>
-  const counter = document.querySelector('counter-component');
+  document.addEventListener("DOMContentLoaded", () => { 
+    const counter = document.querySelector('counter-component');
   console.log(`counter.count: ${counter.count}`);
+    console.log( "ready!" )
+  })
 </script>
 
 {% schema %}
