@@ -48,6 +48,8 @@ class CounterComponent extends HTMLElement {
     // Now that the button is part of the DOM, we can safely attach the event listener
     this.shadowRoot.querySelector('#increment').addEventListener('click', this._increment.bind(this));
     this.shadowRoot.querySelector('#decrement').addEventListener('click', this._decrement.bind(this));
+
+    console.log(`this.count: ${this.count}`)
   }
 }
 
