@@ -110,7 +110,7 @@
     "predictive_search_show_vendor": false,
     "predictive_search_show_price": false,
     "currency_code_enabled": true,
-    "cart_type": "drawer",
+    "cart_type": "notification",
     "show_vendor": false,
     "show_cart_note": false,
     "cart_drawer_collection": "",
@@ -125,26 +125,6 @@
         "type": "main-password-footer",
         "settings": {
           "color_scheme": "background-1"
-        }
-      }
-    },
-    "content_for_index": [
-
-    ],
-    "blocks": {
-      "5057006142565981955": {
-        "type": "shopify:\/\/apps\/affirm-pay-over-time-messaging\/blocks\/cart-drawer-embed-block\/6dce54be-130d-4d13-9636-1e8f611b3071",
-        "disabled": true,
-        "settings": {
-          "logo_align_drawer": "left",
-          "font_size_drawer": 16,
-          "logo_color_drawer": "blue",
-          "logo_type_drawer": "logo",
-          "public_api_key_drawer": "",
-          "cart_drawer_selector": "",
-          "cart_drawer_total_selector": "",
-          "add_to_cart_selector": "",
-          "adjacent_element_selector": ""
         }
       }
     },
